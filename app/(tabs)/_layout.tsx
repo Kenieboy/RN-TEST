@@ -5,19 +5,30 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
+        headerShown: false,
+
         tabBarActiveTintColor: "#4F46E5",
         tabBarInactiveTintColor: "#94A3B8",
+
         tabBarStyle: {
           position: "absolute",
-          margin: 15,
+          bottom: 40,
+          height: 60,
           borderRadius: 50,
-          height: 100,
           backgroundColor: "#FFFFFF",
           borderTopWidth: 0,
+          elevation: 10,
         },
+
+        tabBarItemStyle: {
+          justifyContent: "center",
+          alignItems: "center",
+        },
+
         tabBarLabelStyle: {
           fontSize: 12,
           fontWeight: "600",
+          marginBottom: 5,
         },
       }}
     >
@@ -25,8 +36,8 @@ export default function TabLayout() {
         name="index"
         options={{
           title: "Home",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="home" size={size} color={color} />
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="home" size={24} color={color} />
           ),
         }}
       />
@@ -35,8 +46,8 @@ export default function TabLayout() {
         name="about"
         options={{
           title: "About",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="information-circle" size={size} color={color} />
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="information-circle" size={24} color={color} />
           ),
         }}
       />

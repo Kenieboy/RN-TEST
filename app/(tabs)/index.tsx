@@ -10,7 +10,10 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text className="text-2xl font-bold text-indigo-600 bg-green-500">
+        Hello Tailwind 🚀
+      </Text>
+
       <Link
         href="/about"
         style={{
